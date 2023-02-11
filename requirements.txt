@@ -1,15 +1,8 @@
-axios==0.1.0
 fastapi==0.90.0
-fastjsonschema==2.15.3
-jsonschema==4.6.0
 Keras==2.4.3
 numpy==1.19.5
 opencv-python==4.6.0.66
-Pillow==9.1.1
-python-dotenv==0.21.1
-requests==2.28.0
 scikit-image==0.19.3
-tensorflow==2.5.1
-torch==1.11.0
+tensorflow==2.8.0
 uvicorn==0.20.0
 virtualenv==20.19.0
