@@ -20,9 +20,13 @@ model = load_model('./models/ankle_best_run.h5')
 async def predict(file: UploadFile = File(...)):
   test_data = load_image_into_numpy_array(await file.read())
   result = model.predict(test_data)
+  result = result.reshape(4,)
+  result = result * 100
   label = np.argmax(result)
+  confidence = float(result[label].round(2))
   return {
-    "result": str(label)
+    "result": str(label),
+    "confidence": str(confidence)
   }
 
 def load_image_into_numpy_array(data):
