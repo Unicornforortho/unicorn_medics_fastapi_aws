@@ -1,7 +1,7 @@
-from fastapi import FastAPI, UploadFile, File
-from keras.models import load_model
 import cv2
 import numpy as np
+import tensorflow as tf
+from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -14,7 +14,7 @@ app.add_middleware(
   allow_headers=["*"],
 )
 
-model = load_model('./models/ankle_best_run.h5')
+model = tf.keras.models.load_model('./models/ankle_best_run.h5')
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
@@ -22,8 +22,9 @@ async def predict(file: UploadFile = File(...)):
   result = model.predict(test_data)
   result = result.reshape(4,)
   result = result * 100
+  total_sum = sum(result)
   label = np.argmax(result)
-  confidence = float(result[label].round(2))
+  confidence = float(result[label].round(2))/total_sum
   return {
     "result": str(label),
     "confidence": str(confidence)
