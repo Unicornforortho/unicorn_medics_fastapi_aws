@@ -15,10 +15,12 @@ app.add_middleware(
   allow_headers=["*"],
 )
 
-ankle_one = tf.keras.models.load_model('./models/ankle_best_run.h5')
+ankle_one = tf.keras.models.load_model('./models/ankle_one.h5')
+shoulder_reverse = tf.keras.models.load_model('./models/shoulder_reverse_binary.h5', compile=False)
 
 strToModel = {
-  "ankle_one": ankle_one
+  "ankle_one": ankle_one,
+  "shoulder_reverse": shoulder_reverse
 }
 
 @app.post("/predict")
@@ -26,8 +28,9 @@ async def predict(modelName: str = Form(...), file: UploadFile = File(...)):
   try:
     model = strToModel[modelName]
     test_data = load_image_into_numpy_array(await file.read())
+    number_of_classes = model.output_shape[1]
     result = model.predict(test_data)
-    result = result.reshape(4,)
+    result = result.reshape(number_of_classes,)
     label = np.argmax(result)
     confidence = softmax(result.tolist(), label)
     return {
