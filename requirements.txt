@@ -1,8 +1,9 @@
 fastapi==0.90.0
-Keras==2.4.3
-numpy==1.19.5
-opencv-python==4.6.0.66
+Keras==2.8.0
+numpy==1.20
+opencv-python-headless==4.5.3.56
+protobuf==3.20.0
+python-multipart==0.0.6
 scikit-image==0.19.3
 tensorflow==2.8.0
 uvicorn==0.20.0
-virtualenv==20.19.0
