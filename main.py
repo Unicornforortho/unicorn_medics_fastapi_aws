@@ -3,7 +3,6 @@ import numpy as np
 import tensorflow as tf
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
-from math import exp
 
 app = FastAPI()
 
@@ -15,16 +14,18 @@ app.add_middleware(
   allow_headers=["*"],
 )
 
-ankle_one = tf.keras.models.load_model('./models/ankle_one.h5')
-shoulder_reverse = tf.keras.models.load_model('./models/shoulder_reverse_binary.h5', compile=False)
+ankle = tf.keras.models.load_model('./models/ankle.h5')
+shoulder_reverse = tf.keras.models.load_model('./models/shoulder_reverse.h5', compile=False)
+knee = tf.keras.models.load_model('./models/knee.h5')
 
 strToModel = {
-  "ankle_one": ankle_one,
-  "shoulder_reverse": shoulder_reverse
+  "ankle": ankle,
+  "shoulder_reverse": shoulder_reverse,
+  "knee": knee,
 }
 
 predictionToLink = {
-  "ankle_one": {
+  "ankle": {
     "0": {
       "name": "Depuy Mobility",
       "link": "https://www.depuy-mobility.com/"
@@ -51,11 +52,34 @@ predictionToLink = {
       "name": "Evolutis Unic",
       "link": "https://www.evolutis-unic.com/"
     },
+  },
+  "knee": {
+    "0": {
+      "name": "Zimmer LPS Flex Knee GSF",
+      "link": "https://www.zimmer-lps-flex-knee-gsf.com/"
+    },
+    "1": {
+      "name": "Depuy Attune",
+      "link": "https://www.depu-attune.com/"
+    },
+    "2": {
+      "name": "Microport Medialpivot",
+      "link": "https://www.microport-medialpivot.com/"
+    },
+    "3": {
+      "name": "Link Gemini SL",
+      "link": "https://www.link-gemini-sl.com/"
+    },
+    "4": {
+      "name": "DJO 3D Knee",
+      "link": "https://www.djo-3d-knee.com/"
+    },
   }
 }
 
 @app.post("/predict")
 async def predict(modelName: str = Form(...), file: UploadFile = File(...)):
+  print(modelName)
   try:
     if validate_model_name(modelName):
       model = strToModel[modelName]
