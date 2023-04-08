@@ -55,24 +55,25 @@ predictionToLink = {
   },
   "knee": {
     "0": {
-      "name": "Zimmer LPS Flex Knee GSF",
-      "link": "https://www.zimmer-lps-flex-knee-gsf.com/"
-    },
-    "1": {
       "name": "Depuy Attune",
       "link": "https://www.depu-attune.com/"
     },
-    "2": {
-      "name": "Microport Medialpivot",
-      "link": "https://www.microport-medialpivot.com/"
+    "1": {
+      "name": "DJO 3D Knee",
+      "link": "https://www.djo-3d-knee.com/"
     },
-    "3": {
+    "2": {
       "name": "Link Gemini SL",
       "link": "https://www.link-gemini-sl.com/"
     },
+    "3": {
+      "name": "Microport Medialpivot",
+      "link": "https://www.microport-medialpivot.com/"
+    },
+
     "4": {
-      "name": "DJO 3D Knee",
-      "link": "https://www.djo-3d-knee.com/"
+      "name": "Zimmer LPS Flex Knee GSF",
+      "link": "https://www.zimmer-lps-flex-knee-gsf.com/"
     },
   }
 }
