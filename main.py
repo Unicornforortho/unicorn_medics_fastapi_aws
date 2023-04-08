@@ -16,7 +16,7 @@ app.add_middleware(
 
 ankle = tf.keras.models.load_model('./models/ankle.h5')
 shoulder_reverse = tf.keras.models.load_model('./models/shoulder_reverse.h5', compile=False)
-knee = tf.keras.models.load_model('./models/knee.h5')
+knee = tf.keras.models.load_model('./models/knee.h5', compile=False)
 
 strToModel = {
   "ankle": ankle,
