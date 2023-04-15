@@ -16,11 +16,13 @@ app.add_middleware(
 
 ankle = tf.keras.models.load_model('./models/ankle.h5')
 shoulder_reverse = tf.keras.models.load_model('./models/shoulder_reverse.h5', compile=False)
+shoulder_total = tf.keras.models.load_model('./models/shoulder_total.h5', compile=False)
 knee = tf.keras.models.load_model('./models/knee.h5', compile=False)
 
 strToModel = {
   "ankle": ankle,
   "shoulder_reverse": shoulder_reverse,
+  "shoulder_total": shoulder_total,
   "knee": knee,
 }
 
@@ -53,6 +55,36 @@ predictionToLink = {
       "link": "https://www.evolutis-unic.com/"
     },
   },
+    "shoulder_total": {
+    "0": {
+      "name": "Class 0",
+      "link": "Class 0"
+    },
+    "1": {
+      "name": "Class 1",
+      "link": "Class 1"
+    },
+    "2": {
+      "name": "Class 2",
+      "link": "Class 2"
+    },
+    "3": {
+      "name": "Class 3",
+      "link": "Class 3"
+    },
+    "4": {
+      "name": "Class 4",
+      "link": "Class 4"
+    },
+    "5": {
+      "name": "Class 5",
+      "link": "Class 5"
+    },
+    "6": {
+      "name": "Class 6",
+      "link": "Class 6"
+    },
+  },
   "knee": {
     "0": {
       "name": "Depuy Attune",
@@ -70,7 +102,6 @@ predictionToLink = {
       "name": "Microport Medialpivot",
       "link": "https://www.microport-medialpivot.com/"
     },
-
     "4": {
       "name": "Zimmer LPS Flex Knee GSF",
       "link": "https://www.zimmer-lps-flex-knee-gsf.com/"
@@ -80,7 +111,6 @@ predictionToLink = {
 
 @app.post("/predict")
 async def predict(modelName: str = Form(...), file: UploadFile = File(...)):
-  print(modelName)
   try:
     if validate_model_name(modelName):
       model = strToModel[modelName]
