@@ -114,7 +114,7 @@ async def predict(modelName: str = Form(...), file: UploadFile = File(...)):
   try:
     if validate_model_name(modelName):
       model = strToModel[modelName]
-      test_data = load_image_into_numpy_array(await file.read())
+      test_data = load_image_into_numpy_array(await file.read(), modelName)
       number_of_classes = model.output_shape[1]
       result = model.predict(test_data)
       result = result.reshape(number_of_classes,)
@@ -138,12 +138,14 @@ async def predict(modelName: str = Form(...), file: UploadFile = File(...)):
       "modelName": k
     }
 
-def load_image_into_numpy_array(data):
+def load_image_into_numpy_array(data, modelName):
   npimg = np.frombuffer(data, np.uint8)
   frame = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
   cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
   image = cv2.resize(frame, (224, 224))
   test_data = np.array(image).reshape(1, 224, 224, 3)
+  if modelName == "shoulder_total":
+    test_data = test_data/255.0
   return test_data
 
 def validate_model_name(modelName):
