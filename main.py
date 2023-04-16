@@ -56,34 +56,34 @@ predictionToLink = {
     },
   },
     "shoulder_total": {
-    "0": {
-      "name": "Class 0",
-      "link": "Class 0"
-    },
-    "1": {
-      "name": "Class 1",
-      "link": "Class 1"
-    },
-    "2": {
-      "name": "Class 2",
-      "link": "Class 2"
-    },
-    "3": {
-      "name": "Class 3",
-      "link": "Class 3"
-    },
-    "4": {
-      "name": "Class 4",
-      "link": "Class 4"
-    },
-    "5": {
-      "name": "Class 5",
-      "link": "Class 5"
-    },
-    "6": {
-      "name": "Class 6",
-      "link": "Class 6"
-    },
+      "0": {
+        "name": "Bigliani",
+        "link": "https://www.bigliani.com/"
+      },
+      "1": {
+        "name": "BioModular",
+        "link": "https://www.bio-modular.com/"
+      },
+      "2": {
+        "name": "CofieldII",
+        "link": "https://www.cofield-ii.com/"
+      },
+      "3": {
+        "name": "Global",
+        "link": "https://www.global.com/"
+      },
+      "4": {
+        "name": "Global Advantage",
+        "link": "https://www.gobal-advantage.com/"
+      },
+      "5": {
+        "name": "Global Fracture",
+        "link": "https://www.global-fracture.com/"
+      },
+      "6": {
+        "name": "HRP",
+        "link": "https://www.hrp.com/"
+      },
   },
   "knee": {
     "0": {
