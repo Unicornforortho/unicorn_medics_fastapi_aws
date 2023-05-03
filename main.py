@@ -14,16 +14,18 @@ app.add_middleware(
   allow_headers=["*"],
 )
 
-ankle = tf.keras.models.load_model('./models/ankle.h5')
+ankle = tf.keras.models.load_model('./models/ankle.h5', compile=False)
 shoulder_reverse = tf.keras.models.load_model('./models/shoulder_reverse.h5', compile=False)
 shoulder_total = tf.keras.models.load_model('./models/shoulder_total.h5', compile=False)
 knee = tf.keras.models.load_model('./models/knee.h5', compile=False)
+wrist = tf.keras.models.load_model('./models/wrist.h5', compile=False)
 
 strToModel = {
   "ankle": ankle,
   "shoulder_reverse": shoulder_reverse,
   "shoulder_total": shoulder_total,
   "knee": knee,
+  "wrist": wrist,
 }
 
 predictionToLink = {
@@ -106,6 +108,20 @@ predictionToLink = {
       "name": "Zimmer LPS Flex Knee GSF",
       "link": "https://www.zimmer-lps-flex-knee-gsf.com/"
     },
+  },
+  "wrist": {
+    "0": {
+      "name": "Depuy Biax",
+      "link": "https://www.depuy-biax.com/"
+    },
+    "1": {
+      "name": "Integra Universal 2",
+      "link": "https://www.integra-universal-2.com/"
+    },
+    "2": {
+      "name": "Zimmer Biomet Maestro",
+      "link": "https://www.zimmer-biomet-maestro.com/"
+    },
   }
 }
 
@@ -144,8 +160,8 @@ def load_image_into_numpy_array(data, modelName):
   cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
   image = cv2.resize(frame, (224, 224))
   test_data = np.array(image).reshape(1, 224, 224, 3)
-  if modelName == "shoulder_total":
-    test_data = test_data/255.0
+  if modelName == "shoulder_total" or modelName == "wrist":
+    test_data = test_data / 255.0
   return test_data
 
 def validate_model_name(modelName):
