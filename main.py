@@ -15,6 +15,7 @@ app.add_middleware(
 )
 
 ankle = tf.keras.models.load_model('./models/ankle.h5', compile=False)
+ankle2 = tf.keras.models.load_model('./models/ankle2.h5', compile=False)
 shoulder_reverse = tf.keras.models.load_model('./models/shoulder_reverse.h5', compile=False)
 shoulder_total = tf.keras.models.load_model('./models/shoulder_total.h5', compile=False)
 knee = tf.keras.models.load_model('./models/knee.h5', compile=False)
@@ -22,6 +23,7 @@ wrist = tf.keras.models.load_model('./models/wrist.h5', compile=False)
 
 strToModel = {
   "ankle": ankle,
+  "ankle2": ankle2,
   "shoulder_reverse": shoulder_reverse,
   "shoulder_total": shoulder_total,
   "knee": knee,
@@ -47,6 +49,24 @@ predictionToLink = {
       "link": "https://www.zimmer-biomet-trabecular-model.com/"
     },
   },
+  "ankle2": {
+    "0": {
+      "name": "Depuy Agility",
+      "link": "https://www.depuy-agility.com/"
+    },
+    "1": {
+      "name": "Integra Hintegra",
+      "link": "https://www.integra-hintegra.com/"
+    },
+    "2": {
+      "name": "Tornier Salto",
+      "link": "https://www.tornier-salto.com/"
+    },
+    "3": {
+      "name": "Wright Infinity",
+      "link": "https://www.wright-infinity.com/"
+    },
+  },
   "shoulder_reverse": {
     "0": {
       "name": "Depuy Delta Xtend",
@@ -57,35 +77,35 @@ predictionToLink = {
       "link": "https://www.evolutis-unic.com/"
     },
   },
-    "shoulder_total": {
-      "0": {
-        "name": "Bigliani",
-        "link": "https://www.bigliani.com/"
-      },
-      "1": {
-        "name": "BioModular",
-        "link": "https://www.bio-modular.com/"
-      },
-      "2": {
-        "name": "CofieldII",
-        "link": "https://www.cofield-ii.com/"
-      },
-      "3": {
-        "name": "Global",
-        "link": "https://www.global.com/"
-      },
-      "4": {
-        "name": "Global Advantage",
-        "link": "https://www.gobal-advantage.com/"
-      },
-      "5": {
-        "name": "Global Fracture",
-        "link": "https://www.global-fracture.com/"
-      },
-      "6": {
-        "name": "HRP",
-        "link": "https://www.hrp.com/"
-      },
+  "shoulder_total": {
+    "0": {
+      "name": "Bigliani",
+      "link": "https://www.bigliani.com/"
+    },
+    "1": {
+      "name": "BioModular",
+      "link": "https://www.bio-modular.com/"
+    },
+    "2": {
+      "name": "CofieldII",
+      "link": "https://www.cofield-ii.com/"
+    },
+    "3": {
+      "name": "Global",
+      "link": "https://www.global.com/"
+    },
+    "4": {
+      "name": "Global Advantage",
+      "link": "https://www.gobal-advantage.com/"
+    },
+    "5": {
+      "name": "Global Fracture",
+      "link": "https://www.global-fracture.com/"
+    },
+    "6": {
+      "name": "HRP",
+      "link": "https://www.hrp.com/"
+    },
   },
   "knee": {
     "0": {
