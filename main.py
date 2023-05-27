@@ -36,135 +36,135 @@ predictionToLink = {
   "ankle": {
     "0": {
       "name": "Depuy Mobility",
-      "link": "https://www.depuy-mobility.com/"
+      "link": "http://www.rpa.spot.pt/getdoc/5243102b-0def-4108-a82f-8b59568ad3b7/Mobility-Total-Ankle-Surgical-Technique.aspx"
     },
     "1": {
       "name": "Stryker Star",
-      "link": "https://www.stryker-star.com/"
+      "link": "https://www.stryker.com/kw/en/foot-and-ankle/products/star/index-eu.html"
     },
     "2": {
       "name": "Wright Inbone II",
-      "link": "https://www.write-inbone-ii.com/"
+      "link": "https://www.wright.com/footandankleproducts/inbone-ii-total-ankle-system"
     },
     "3": {
       "name": "Zimmer Biomet Trabecular Model",
-      "link": "https://www.zimmer-biomet-trabecular-model.com/"
+      "link": "https://www.zimmerbiomet.com/content/dam/zimmer-biomet-OUS-Surg-techniques/foot-and-ankle/trabecular-metal-total-ankle-surgical-technique.pdf"
     },
   },
   "ankle2": {
     "0": {
       "name": "Depuy Agility",
-      "link": "https://www.depuy-agility.com/"
+      "link": "https://pubmed.ncbi.nlm.nih.gov/18692011/"
     },
     "1": {
       "name": "Integra Hintegra",
-      "link": "https://www.integra-hintegra.com/"
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8023928/"
     },
     "2": {
       "name": "Tornier Salto",
-      "link": "https://www.tornier-salto.com/"
+      "link": "https://www.londonfootankle.co.uk/downloads/SALTO-technique.pdf"
     },
     "3": {
       "name": "Wright Infinity",
-      "link": "https://www.wright-infinity.com/"
+      "link": "https://www.wright.com/footandankleproducts/infinity-total-ankle-system"
     },
   },
   "shoulder_reverse": {
     "0": {
       "name": "Depuy Delta Xtend",
-      "link": "https://www.depuy-delta-xtend.com/"
+      "link": "http://synthes.vo.llnwd.net/o16/LLNWMB8/INT%20Mobile/Synthes%20International/Product%20Support%20Material/legacy_Synthes_PDF/103333.pdf"
     },
     "1": {
       "name": "Evolutis Unic",
-      "link": "https://www.evolutis-unic.com/"
+      "link": "https://link.springer.com/chapter/10.1007/978-3-319-20840-4_36"
     },
   },
   "shoulder_total": {
     "0": {
       "name": "Bigliani",
-      "link": "https://www.bigliani.com/"
+      "link": "https://www.zimmerbiomet.com/content/dam/zimmer-biomet-OUS-Surg-techniques/shoulder/bigliani-flatow-surgical-technique.pdf"
     },
     "1": {
       "name": "BioModular",
-      "link": "https://www.bio-modular.com/"
+      "link": "http://faculty.washington.edu/alexbert/Shoulder/Surgery/BiometBioModularChoiceShoulderSystem.pdf"
     },
     "2": {
       "name": "CofieldII",
       "link": "https://www.cofield-ii.com/"
     },
     "3": {
-      "name": "Global",
-      "link": "https://www.global.com/"
+      "name": "Depuy Global",
+      "link": "https://www.jnjmedtech.com/en-EMEA/product/global-unite-shoulder-system"
     },
     "4": {
-      "name": "Global Advantage",
-      "link": "https://www.gobal-advantage.com/"
+      "name": "Depuy Global Advantage",
+      "link": "https://www.camaramx.com/wp-content/themes/camara/images/pdf/16-Global-Advantage.pdf"
     },
     "5": {
       "name": "Global Fracture",
-      "link": "https://www.global-fracture.com/"
+      "link": "https://www.jnjmedtech.com/en-EMEA/product/global-unite-shoulder-system"
     },
     "6": {
       "name": "HRP",
-      "link": "https://www.hrp.com/"
+      "link": "http://shoulderarthritis.blogspot.com/2016/10/fixation-of-humeral-component-with.html"
     },
   },
   "knee": {
     "0": {
       "name": "Depuy Attune",
-      "link": "https://www.depu-attune.com/"
+      "link": "https://www.jnjmedtech.com/en-US/product/attune-knee-system"
     },
     "1": {
       "name": "DJO 3D Knee",
-      "link": "https://www.djo-3d-knee.com/"
+      "link": "https://www.djoglobal.com/products/surgical/empowr-3d-knee"
     },
     "2": {
       "name": "Link Gemini SL",
-      "link": "https://www.link-gemini-sl.com/"
+      "link": "http://www.linkorthopaedics.in/us/for-the-physician/products/knee/totalknee.html"
     },
     "3": {
       "name": "Microport Medialpivot",
-      "link": "https://www.microport-medialpivot.com/"
+      "link": "https://www.businesswire.com/news/home/20180130005228/en/Study-Shows-Patients-with-MicroPort%E2%80%99s-Medial-Pivot-Knee-Are-More-Likely-to-Forget-They%E2%80%99ve-Had-a-Joint-Replacement"
     },
     "4": {
       "name": "Zimmer LPS Flex Knee GSF",
-      "link": "https://www.zimmer-lps-flex-knee-gsf.com/"
+      "link": "http://surgitech.net/wp-content/uploads/2018/11/Gender_Solutions_NexGen_High-Flex_Implants_Brochure_97-5764-001-00_10_2006.pdf"
     },
   },
   "knee2": {
     "0": {
       "name": "Exatech Opterak",
-      "link": "https://www.exatech-opterak.com/"
+      "link": "https://au.exac.com/knee/optetrak-logic-primary-system/"
     },
     "1": {
       "name": "Smith Legion",
-      "link": "https://www.smith-legion.com/"
+      "link": "https://smith-nephew.com/en-us/health-care-professionals/products/orthopaedics/legion-tks"
     },
     "2": {
       "name": "Stryker NRG",
-      "link": "https://www.stryker-nrg.com/"
+      "link": "https://www.strykermeded.com/media/1502/scorpio-nrg-ar-technique-lsnrgar_st.pdf"
     },
     "3": {
       "name": "Zimmer LPS",
-      "link": "https://www.zimmer-lps.com/"
+      "link": "https://www.zimmerbiomet.com/content/dam/zimmer-biomet-OUS-Surg-techniques/knee/1393.1-GLBL-en%20NexGen%20LPS%20Fixed%20Bearing%20Knee%20SurgTech-DIGITAL.pdf"
     },
     "4": {
       "name": "Zimmer Persona",
-      "link": "https://www.zimmer-persona.com/"
+      "link": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/knee/persona-knee-system.html"
     },
   },
   "wrist": {
     "0": {
       "name": "Depuy Biax",
-      "link": "https://www.depuy-biax.com/"
+      "link": "https://www.researchgate.net/publication/51205490_Results_of_189_wrist_replacements_A_report_from_the_Norwegian_Arthroplasty_Register"
     },
     "1": {
       "name": "Integra Universal 2",
-      "link": "https://www.integra-universal-2.com/"
+      "link": "http://fischermedical.dk/wp-content/uploads/Integra_Universal2_SurgicalTehnique.pdf"
     },
     "2": {
       "name": "Zimmer Biomet Maestro",
-      "link": "https://www.zimmer-biomet-maestro.com/"
+      "link": "https://www.zimmerbiomet.com/content/zimmerbiomet/master/zb-latam-master/en/medical-professionals/trauma/product/maestro-wrist-reconstructive-system.html"
     },
   }
 }
